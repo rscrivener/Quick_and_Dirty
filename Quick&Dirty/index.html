@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jQuery/jQuery.js"></script>
+    <script type="text/javascript" src="Templates/DefaultElements.js"></script>
+    <script type="text/javascript" src="Renderer/Renderer.js"></script></head>
+    <script>
+        //remember to import any files that contain templates
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var pageTitle = "Hello, world!"
+        App({
+            head: title({}, [
+                pageTitle
+            ]),
+            body: [
+                h1({/*place attributes in here!*/ }, ["Hello, world!"]),
+                h2({}, "Hello, world"),
+                h3({}, ["Hello, ", "world"]),
+                h4({}, [h5({}, ["Hello, "]), "world!"]),
+                div({ id: "target" }, []),
+                div({},[pageTitle])
+            ]
+        });
+        div({},["Hello, world!"], $("#target"))
+        // type your code here (or in a external file)
+    </script>
+</body>
+</html>
